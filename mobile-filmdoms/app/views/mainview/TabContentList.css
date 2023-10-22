@@ -1,0 +1,53 @@
+
+
+div{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 14px;
+    line-height: 27px; /* 192.857% */
+}
+.tab-content{
+    display: flex;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 27px;
+
+}
+.tag{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #F7F7F5;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    background-color: #111;
+    justify-content: center;
+    margin-right: 13px;
+}
+.tag EVENT{
+    color: #F7F7F5;
+}
+.tab-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Pretendard-Medium;
+
+}
+.comment-count{
+    color: #F0380F;
+
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+    margin-left: 6px;
+}
+.content-list-wrapper{
+    width: 100%;
+}
