@@ -1,0 +1,56 @@
+.filmUniverse-boardName{
+    margin-left: 0px;
+    margin-bottom: 24px;
+    color: #222;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    margin-top: 40px;
+}
+.filmUniverse-mainImage{
+    width: 248px;
+    height: 290px;
+}
+.filmUniverse-wrapper{
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+
+}
+.filmUniverse-wrapper::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.filmUniverse{
+    padding-left: 20px;
+}
+.filmUniverse-lists{
+    margin-right: 8px;
+    width: 248px;
+}
+.filmUniverse-title{
+    color: #000;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+
+}
+.filmUniverse-date{
+    color: #666;
+    padding-top: 16px;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
