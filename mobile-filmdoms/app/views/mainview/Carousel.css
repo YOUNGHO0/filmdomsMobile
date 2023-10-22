@@ -1,0 +1,15 @@
+.swiper{
+}
+.carousel{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.swiper-pagination-bullets{
+    margin: 5px;
+    width: initial  !important;
+    top: 10px !important;
+}
+.swiper-pagination-bullet{
+    background-color: #F7F7F5;
+}
