@@ -1,0 +1,85 @@
+.critic-boardName{
+    margin-left: 0px;
+    margin-bottom: 24px;
+    color: #222;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    margin-top: 40px;
+}
+.critic{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.critic-mainImage{
+    width: 100%
+}
+.critic{
+
+}
+.critic-wrapper{
+
+}
+.critic-info{
+    margin-top: 16px;
+    display: flex;
+}
+.critic-author{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    color: #FF5414;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    margin-right: 16px;
+    text-align: center;
+
+
+}
+.critic-tag{
+    color: #AAAAAA;
+    fontSize: 12;
+    fontFamily: 'Pretendard';
+    fontWeight: '700';
+    lineHeight: 14;
+    letterSpacing: 0.12;
+    wordWrap: 'break-word';
+    border: #AAAAAA 2px solid;
+    padding:8px 14px 8px 14px;
+    border-radius: 10px;
+
+}
+
+.MuiChip-label {
+
+    color: #AAAAAA;
+    display: flex;
+    font-family: Pretendard;
+    font-weight: 700;
+    height: 28px;
+
+}
+.critic-title{
+    color: #111;
+    margin-top: 8px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    rotate: 0.003deg;
+    line-height: 30px; /* 187.5% */
+}
+.critic-date{
+    color: #AAA;
+    margin-top: 12px;
+    margin-bottom: 32px;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+}
