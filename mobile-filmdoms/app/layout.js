@@ -14,12 +14,12 @@ function LogoUserSearchButton(){
         <table className={"logo-userButton"}>
             <tr>
                 <td>
-                    <img className={"logo-img"} src={"logo.png"}></img>
+                    <img className={"logo-img"} src={"/logo.png"}></img>
                 </td>
                 <td>
                     <div className={"main-img-wrapper"}>
-                        <img src={"search-button.png"}></img>
-                        <img className={"user-profile"} src={"user.png"}></img>
+                        <img src={"/search-button.png"}></img>
+                        <img className={"user-profile"} src={"/user.png"}></img>
 
                     </div>
                 </td>
@@ -31,7 +31,9 @@ function NavBar(){
     return (
         <div className={"nav-bar"}>
             <div>About</div>
+            <Link href={'/board/movie'}>
             <div>Movie</div>
+            </Link>
             <div>Film Universe</div>
             <div>Critic</div>
         </div>
@@ -54,7 +56,7 @@ function Footer(){
     return(
         <div className={"footer"}>
             <div className={"footer-content"}>
-                <img className={"footer-img"} src={"footerLogo.png"}></img>
+                <img className={"footer-img"} src={"/footerLogo.png"}></img>
                 <div className={"footer-info"}>
                     <p>필름덤즈 대표자 : 허창훈 </p>
                     <p>등록번호 : 273-92-01709</p>
@@ -70,10 +72,10 @@ function Footer(){
                     <p className={"footer-copyright-text"}>Copyright Filmdom’s Rights All Reserved</p>
                     <div style={{marginTop:"20px",}} className={"footer-external"}>
                         <Link href={"https://www.instagram.com/filmdomaypole/"}>
-                            <img style={{height:"18px", width:"18px",marginBottom:"3px",marginRight:"12px",opacity:"0.5"}}src="instagram.png"/>
+                            <img style={{height:"18px", width:"18px",marginBottom:"3px",marginRight:"12px",opacity:"0.5"}}src="/instagram.png"/>
                         </Link>
                         <Link href={"/"}>
-                            <img style={{height:"24px", width:"24px"}}src="thread.png"/>
+                            <img style={{height:"24px", width:"24px"}}src="/thread.png"/>
                         </Link>
 
                     </div>
