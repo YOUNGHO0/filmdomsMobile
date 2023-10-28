@@ -19,8 +19,8 @@ export default function BoardComponent(props){
             {
                 drawTags()
             }
-
         </div>
+            {props.children}
             <BoardContent tag = {tags[number]} boardName = {boardName}></BoardContent>
         </div>
 
