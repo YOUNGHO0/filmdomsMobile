@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import './layout.css'
+import styles from  './layout.module.css'
 import Link from "next/link";
+import QueryProvider from "@/app/QueryProvider";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,31 +12,31 @@ export const metadata = {
 
 function LogoUserSearchButton(){
     return(
-        <table className={"logo-userButton"}>
+        <table className={styles["logo-userButton"]}>
+            <tbody>
             <tr>
                 <td>
-                    <img className={"logo-img"} src={"/logo.png"}></img>
+                    <img className={styles["logo-img"]} src={"/logo.png"}></img>
                 </td>
                 <td>
-                    <div className={"main-img-wrapper"}>
+                    <div className={styles["main-img-wrapper"]}>
                         <img src={"/search-button.png"}></img>
-                        <img className={"user-profile"} src={"/user.png"}></img>
+                        <img className={styles["user-profile"]} src={"/user.png"}></img>
 
                     </div>
                 </td>
             </tr>
+            </tbody>
         </table>
     )
 }
 function NavBar(){
     return (
-        <div className={"nav-bar"}>
-            <div>About</div>
-            <Link href={'/board/movie'}>
-            <div>Movie</div>
-            </Link>
-            <div>Film Universe</div>
-            <div>Critic</div>
+        <div className={styles["nav-bar"]}>
+            <div><Link href={'/'}>About</Link></div>
+            <div><Link href={'/board/movie'}>Movie</Link></div>
+            <div><Link href={'/board/film_universe'}>Film Universe</Link></div>
+            <div><Link href={'/board/critic'}>Critic</Link></div>
         </div>
     );
 }
@@ -43,7 +44,7 @@ function NavBar(){
 function DefaultLayout(){
 
   return (
-      <div className={"layout-background"}>
+      <div className={styles["layout-background"]}>
           <LogoUserSearchButton></LogoUserSearchButton>
           <NavBar></NavBar>
       </div>
@@ -54,23 +55,23 @@ function DefaultLayout(){
 
 function Footer(){
     return(
-        <div className={"footer"}>
-            <div className={"footer-content"}>
-                <img className={"footer-img"} src={"/footerLogo.png"}></img>
-                <div className={"footer-info"}>
+        <div className={styles["footer"]}>
+            <div className={styles["footer-content"]}>
+                <img className={styles["footer-img"]} src={"/footerLogo.png"}></img>
+                <div className={styles["footer-info"]}>
                     <p>필름덤즈 대표자 : 허창훈 </p>
                     <p>등록번호 : 273-92-01709</p>
                     <p>등록일 :  2022.12.01  </p>
                     <p>문의 및 제안 : Filmdomaypole@naver.com</p>
                 </div>
-                <div className={"footer-link"}>
-                    <Link href={"/"}>About us</Link>
-                    <Link href={"/"}>Advertisement</Link>
-                    <Link href={"/"}>Follow us</Link>
+                <div className={styles["footer-link"]}>
+                    <Link href={'/'}>About us</Link>
+                    <Link href={'/'}>Advertisement</Link>
+                    <Link href={'/'}>Follow us</Link>
                 </div>
-                <div className={"footer-copyright"}>
-                    <p className={"footer-copyright-text"}>Copyright Filmdom’s Rights All Reserved</p>
-                    <div style={{marginTop:"20px",}} className={"footer-external"}>
+                <div className={styles["footer-copyright"]}>
+                    <p className={styles["footer-copyright-text"]}>Copyright Filmdom’s Rights All Reserved</p>
+                    <div style={{marginTop:"20px",}} className={styles["footer-external"]}>
                         <Link href={"https://www.instagram.com/filmdomaypole/"}>
                             <img style={{height:"18px", width:"18px",marginBottom:"3px",marginRight:"12px",opacity:"0.5"}}src="/instagram.png"/>
                         </Link>
@@ -94,9 +95,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <QueryProvider>
       <DefaultLayout></DefaultLayout>
       {children}
       <Footer></Footer>
+      </QueryProvider>
       </body>
     </html>
   )
