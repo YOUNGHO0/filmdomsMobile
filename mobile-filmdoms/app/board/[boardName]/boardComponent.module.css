@@ -1,0 +1,48 @@
+.boardPage-title{
+    padding-top : 32px;
+    color: #111;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    text-transform: capitalize;
+    padding-left: 20px;
+}
+.boardPage-tags-wrapper{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+    margin-bottom: 17px;
+}
+.boardPage-tags-wrapper::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.clicked{
+    font-size: 13px;
+    text-align: center;
+    color : white;
+    font-weight: 700;
+    font-family: Pretendard;
+    padding: 8px 15px;
+    border-radius: 16px;
+    border: 2px solid #FF5414;
+    background: #FF5414;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+.notClicked{
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Pretendard;
+
+    border-radius: 16px;
+    border: 2px solid black;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
