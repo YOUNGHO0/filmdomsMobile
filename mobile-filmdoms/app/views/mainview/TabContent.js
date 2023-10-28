@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './TabContent.css'
 import TabContentList from "@/app/views/mainview/TabContentList";
+import {useEffect, useState} from "react";
 
 
 function CustomTabPanel(props) {
@@ -36,12 +37,18 @@ CustomTabPanel.propTypes = {
 };
 
 export default function TabBoard({recent,movie}) {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
+
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    return (
+    return mounted && (
         <Box sx={{ width: '100%' }}>
             <Box style={{ width:"100%", borderBottom: 1, borderColor: 'divider'}}>
                 <Tabs  textColor={"inherit"} value={value} onChange={handleChange} TabIndicatorProps={{style: {background:"none", borderBottom:"#FF5414 2px solid"}}} >
