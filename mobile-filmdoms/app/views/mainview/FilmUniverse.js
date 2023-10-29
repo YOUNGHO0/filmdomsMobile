@@ -1,5 +1,5 @@
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import './FilmUniverse.css'
+import styles from './FilmUniverse.module.css'
 
 
 export default async function FilmUniverse()
@@ -10,17 +10,17 @@ export default async function FilmUniverse()
     const data = filmUniverse.result
 
     return(
-        <div className={"filmUniverse"}>
-            <div className={"filmUniverse-boardName"}> FilmUniverse</div>
-            <div className={"filmUniverse-wrapper"}>
+        <div className={styles["filmUniverse"]}>
+            <div className={styles["filmUniverse-boardName"]}> FilmUniverse</div>
+            <div className={styles["filmUniverse-wrapper"]}>
 
                 {
                     data.map((value,key)=>{
                         return(
-                            <div className={"filmUniverse-lists"}>
-                                     <img className={"filmUniverse-mainImage"} src={value.mainImage}/>
-                                    <div className={"filmUniverse-title"}>{value.title}</div>
-                                    <div className={"filmUniverse-date"}>{value.startAt} ~ {value.endAt}</div>
+                            <div className={styles["filmUniverse-lists"]}>
+                                     <img className={styles["filmUniverse-mainImage"]} src={value.mainImage}/>
+                                    <div className={styles["filmUniverse-title"]}>{value.title}</div>
+                                    <div className={styles["filmUniverse-date"]}>{value.startAt} ~ {value.endAt}</div>
                             </div>
                         )
                     })

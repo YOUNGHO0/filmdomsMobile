@@ -1,4 +1,4 @@
-import './Board.css'
+import styles from './Board.module.css'
 import TabBoard from "@/app/views/mainview/TabContent";
 export default async function Board(props){
     let recent = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/v1/main/recent',{method: 'get'})
@@ -8,7 +8,7 @@ export default async function Board(props){
 
     return (
         <div>
-            <div className={"board-boardName"}>Board</div>
+            <div className={styles["board-boardName"]}>Board</div>
             <TabBoard recent = {recent} movie = {movie} ></TabBoard>
         </div>
     )
