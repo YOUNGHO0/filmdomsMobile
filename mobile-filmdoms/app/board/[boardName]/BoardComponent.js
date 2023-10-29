@@ -10,8 +10,6 @@ export default function BoardComponent(props){
     const handleClick = (value)=>{
         changeNumber(value)
     }
-    let tagsData = undefined
-    console.log(tags)
 
     return(
         <div>

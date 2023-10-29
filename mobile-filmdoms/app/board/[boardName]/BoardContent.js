@@ -1,9 +1,6 @@
 import {useInfiniteQuery, useQuery} from "@tanstack/react-query";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import {Chip, styled} from "@mui/material";
-import Image from "next/image";
 import InfiniteScroll from "react-infinite-scroll-component";
-import {useState} from "react";
 import BoardContentList from "@/app/board/[boardName]/BoardContentList";
 
 export default function BoardContent(props){
@@ -21,8 +18,6 @@ export default function BoardContent(props){
 
     ,getNextPageParam:(lastPage, pages)=>{
 
-            console.log(lastPage);
-            console.log(pages);
             if (lastPage.result.number < lastPage.result.totalPages-1)
             {
                 return lastPage.result.number+1;
