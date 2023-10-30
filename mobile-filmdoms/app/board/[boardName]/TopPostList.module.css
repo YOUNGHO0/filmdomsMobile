@@ -1,0 +1,53 @@
+.folded{
+    line-height: 24px;
+}
+.unfolded{
+    margin-top: 16px;
+}
+.topPostTitle{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Pretendard-Medium;
+    line-height: 16px; /* 150% */
+}
+.topPostHeader{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.topPostWriter{
+    margin-left: auto;
+    color: #444;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    padding-right: 5px;
+    line-height: 16px; /* 150% */
+}
+.topPostIndex{
+    color: #FF5414;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 150% */
+}
+.listUnfolded{
+    display: block;
+}
