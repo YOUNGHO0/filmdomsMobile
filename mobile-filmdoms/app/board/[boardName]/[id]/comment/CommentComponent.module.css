@@ -1,0 +1,33 @@
+.commentHeader{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 171.429% */
+}
+.commentUser{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+.commentContent{
+    color: #666;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+.likeText{
+    color: black;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+.commentLikeButton{
+    max-width: 20px;
+}
