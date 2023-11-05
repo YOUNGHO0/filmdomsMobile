@@ -1,0 +1,68 @@
+.detailBoardName{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 150% */
+}
+
+.detailTag{
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Pretendard;
+
+    border-radius: 16px;
+    border: 2px solid black;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.detailDate{
+    margin-left: 16px;
+    font-size: 12px;
+}
+.title{
+    color: #111;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+}
+.nickName{
+    color: #111;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+.detailInfo{
+    color: #AAA;
+
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 6px;
+}
+
+.detailColor{
+    color: #FF5414;
+}
+.likeText{
+    color: #FF5414;
+
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 171.429% */
+}
+
