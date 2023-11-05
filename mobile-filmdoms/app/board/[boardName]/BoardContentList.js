@@ -2,6 +2,7 @@ import {Chip} from "@mui/material";
 import Image from "next/image";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import styles from './BoardContentList.module.css'
+import Link from "next/link";
 const  chipStyle =
     {
         fontFamily:'Pretendard',
@@ -49,7 +50,6 @@ function drawAuthorAndViewVote(value) {
                 <div className={styles["boardContent-voteCount"]}>{value.likes}</div>
             </div>
         </div>
-        <hr></hr>
 
     </div>;
 }
@@ -63,11 +63,14 @@ export default  function BoardContentList(props){
             {
                 props.contentList.map((value)=>{
                     return (
-                        <div>
-                            {drawTagAndDate(value)}
-                            {drawTitle(value)}
-                            {drawAuthorAndViewVote(value)}
-                        </div>
+                            <div>
+                                <Link href={`/board/${value.category}/${value.id}`}>
+                                {drawTagAndDate(value)}
+                                {drawTitle(value)}
+                                {drawAuthorAndViewVote(value)}
+                                </Link>
+                                <hr></hr>
+                            </div>
                     )
                 })
             }

@@ -2,6 +2,7 @@
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import styles from './Critic.module.css'
 import {Chip} from "@mui/material";
+import Link from "next/link";
 
 export default async function Critic(){
 
@@ -21,6 +22,7 @@ export default async function Critic(){
                         let month = myDate.getMonth()+1;
                         let date = myDate.getDate();
                         return(
+                            <Link href={`/board/${value.category}/${value.id}`}>
                             <div>
                                 <img className={styles["critic-mainImage"]} src={value.mainImage}/>
                                 <div className={styles["critic-info"]}>
@@ -30,6 +32,7 @@ export default async function Critic(){
                                 <div className={styles["critic-title"]}>{value.title}</div>
                                 <div className={styles["critic-date"]}>{year + '.' + month + '.'+ date}</div>
                             </div>
+                            </Link>
                         )
                     })
                 }
