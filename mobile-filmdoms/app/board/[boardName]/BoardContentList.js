@@ -64,7 +64,7 @@ export default  function BoardContentList(props){
                 props.contentList.map((value)=>{
                     return (
                             <div>
-                                <Link href={`/board/${value.category}/${value.id}`}>
+                                <Link href={`/board/detail/${value.category}/${value.id}`}>
                                 {drawTagAndDate(value)}
                                 {drawTitle(value)}
                                 {drawAuthorAndViewVote(value)}

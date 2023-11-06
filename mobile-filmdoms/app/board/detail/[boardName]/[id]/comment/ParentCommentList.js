@@ -1,4 +1,4 @@
-import ParentComment from "@/app/board/[boardName]/[id]/comment/ParentComment";
+import ParentComment from "@/app/board/detail/[boardName]/[id]/comment/ParentComment";
 
 export default function ParentCommentList(props){
 

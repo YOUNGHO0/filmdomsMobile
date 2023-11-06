@@ -7,9 +7,11 @@ import TopPost from "@/app/board/[boardName]/TopPost";
 async function getTags(boardTitle) {
     let result = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/v1/' + boardTitle + '/tag', {method: 'get'})
         .then(value => value.json())
+
     let all = {tag: 'ALL', description: "전체"};
     let tags = [all, ...result.result];
     return tags;
+
 }
 export default async function movie(props){
 

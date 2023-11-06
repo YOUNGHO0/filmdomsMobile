@@ -1,6 +1,6 @@
 import Image from "next/image";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import styles from "@/app/board/[boardName]/[id]/comment/CommentComponent.module.css";
+import styles from "@/app/board/detail/[boardName]/[id]/comment/CommentComponent.module.css";
 
 function LikeButton(props) {
     let comment =props.comment

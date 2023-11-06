@@ -1,4 +1,4 @@
-import ChildComment from "@/app/board/[boardName]/[id]/comment/ChildComment";
+import ChildComment from "@/app/board/detail/[boardName]/[id]/comment/ChildComment";
 export default function ChildCommentList(props){
     const comments = props.comments;
     let childComments;

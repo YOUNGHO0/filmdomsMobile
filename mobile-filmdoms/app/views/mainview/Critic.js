@@ -22,7 +22,7 @@ export default async function Critic(){
                         let month = myDate.getMonth()+1;
                         let date = myDate.getDate();
                         return(
-                            <Link href={`/board/${value.category}/${value.id}`}>
+                            <Link href={`/board/detail/${value.category}/${value.id}`}>
                             <div>
                                 <img className={styles["critic-mainImage"]} src={value.mainImage}/>
                                 <div className={styles["critic-info"]}>

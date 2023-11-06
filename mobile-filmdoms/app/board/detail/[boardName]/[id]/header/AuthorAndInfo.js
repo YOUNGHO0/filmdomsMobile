@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/app/board/[boardName]/[id]/BoardDetailComponent.module.css";
+import styles from "@/app/board/detail/[boardName]/[id]/BoardDetailComponent.module.css";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default function AuthorAndInfo(props) {

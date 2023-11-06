@@ -1,3 +1,4 @@
+'use client'
 import {useInfiniteQuery, useQuery} from "@tanstack/react-query";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import InfiniteScroll from "react-infinite-scroll-component";

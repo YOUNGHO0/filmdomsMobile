@@ -1,5 +1,5 @@
 import {Chip} from "@mui/material";
-import styles from "@/app/board/[boardName]/[id]/BoardDetailComponent.module.css";
+import styles from "@/app/board/detail/[boardName]/[id]/BoardDetailComponent.module.css";
 
 const  chipStyle =
     {

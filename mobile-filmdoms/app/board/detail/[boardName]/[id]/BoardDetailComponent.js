@@ -3,10 +3,10 @@ import {useRouter} from "next/navigation";
 import styles from './BoardDetailComponent.module.css'
 import Image from "next/image";
 import {useState} from "react";
-import TagDateAndTitle from "@/app/board/[boardName]/[id]/header/TagAndTitle";
-import AuthorAndInfo from "@/app/board/[boardName]/[id]/header/AuthorAndInfo";
-import ContentAndLikes from "@/app/board/[boardName]/[id]/content/ContentAndLikes";
-import CommentComponent from "@/app/board/[boardName]/[id]/comment/CommentComponent";
+import TagDateAndTitle from "@/app/board/detail/[boardName]/[id]/header/TagAndTitle";
+import AuthorAndInfo from "@/app/board/detail/[boardName]/[id]/header/AuthorAndInfo";
+import ContentAndLikes from "@/app/board/detail/[boardName]/[id]/content/ContentAndLikes";
+import CommentComponent from "@/app/board/detail/[boardName]/[id]/comment/CommentComponent";
 
 function toDate(number){
     const timestamp = number;
