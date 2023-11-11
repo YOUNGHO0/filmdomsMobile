@@ -1,0 +1,76 @@
+.header{
+    color: #FF5414;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+.clicked{
+    font-size: 13px;
+    text-align: center;
+    color : white;
+    font-weight: 700;
+    font-family: Pretendard;
+    padding: 8px 15px;
+    border-radius: 16px;
+    border: 2px solid #FF5414;
+    background: #FF5414;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+.notClicked{
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Pretendard;
+    color: #AAA;
+    border-radius: 16px;
+    border: 2px solid #AAA;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+.tags{
+    display: flex;
+    justify-content: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+    margin-bottom: 17px;
+
+
+}
+.tags::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.filmNotice{
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+
+}
+.criticText{
+    color: #FF5414;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 100% */
+    margin-top: 55px;
+}
+
