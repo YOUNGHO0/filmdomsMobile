@@ -1,5 +1,14 @@
-export default ()=>{
+import CriticHeader from "@/app/board/critic/CriticHeader";
+import ThisWeekCritic from "@/app/board/critic/ThisWeekCritic";
+import CriticContent from "@/app/board/critic/CriticContent";
+
+export default function critic(){
+
     return(
-        <div> 크리틱 페이지</div>
+        <div>
+            <CriticHeader></CriticHeader>
+            <ThisWeekCritic></ThisWeekCritic>
+            <CriticContent></CriticContent>
+        </div>
     )
 }
