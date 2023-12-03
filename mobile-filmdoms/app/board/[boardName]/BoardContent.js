@@ -48,15 +48,11 @@ export default function BoardContent(props){
         <div style={{marginLeft: '20px', marginRight: '20px', paddingTop: '16px '}}>
             <InfiniteScroll dataLength={data.pages.length} hasMore={hasNextPage} next={fetchNextPage} >
                 {
-                    data.pages.map((value)=>{
-                        return(<BoardContentList contentList = {value.result.content}></BoardContentList>)
+                    data.pages.map((value,index)=>{
+                        return(<BoardContentList key ={"page"+index} contentList = {value.result.content}></BoardContentList>)
                     })
                 }
             </InfiniteScroll>
-
-
-
-
         </div>
     )
 
