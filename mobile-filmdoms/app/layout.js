@@ -21,7 +21,7 @@ export const metadata = {
     return(
         <div style={{display:"flex", alignItems:"center"}}>
             <div style={{padding:"12px 20px"}}>
-                <Link href={"/"}><Image src={'/logo.png '} alt={"logo"} width={30} height={30}></Image></Link>
+                <Link href={"/"}><Image src={'/logo.png'} alt={"logo"} width={30} height={30}></Image></Link>
             </div>
             <div style={{ display:"flex", marginLeft:"auto", alignItems:"center"}}>
                 <Image src={'/search-button.png'} alt={"searchButton"} style={{marginRight:"10px"}} width={24} height={24}></Image>
