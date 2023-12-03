@@ -1,6 +1,7 @@
 .boardContent-date{
     margin-left: 16px;
     font-size: 12px;
+    color: black;
 }
 .boardContent-tdWrapper{
     line-height: 32px;

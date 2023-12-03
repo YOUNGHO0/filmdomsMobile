@@ -1,3 +1,6 @@
 body{
     margin: 0px;
+
 }
+a:visited { text-decoration: none; color: inherit }
+a { text-decoration: none;  }
