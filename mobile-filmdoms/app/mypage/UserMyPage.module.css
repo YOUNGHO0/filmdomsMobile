@@ -1,0 +1,25 @@
+.email{
+    color: #666;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+}
+.emailInput{
+    background-color: rgba(239, 239, 239, 0.3);
+    border: none;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
+}
+.emailInput:focus{
+    border: none;
+    background-color: rgba(239, 239, 239, 0.3);
+    outline: none;
+}
+.emailInput::placeholder{
+    color: black;
+}
