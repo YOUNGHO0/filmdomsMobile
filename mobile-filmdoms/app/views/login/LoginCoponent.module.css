@@ -1,0 +1,39 @@
+.textbox::placeholder{
+    color: white;
+}
+.textbox:focus{
+    outline: 2px solid white;
+}
+.textbox{
+    box-sizing: border-box;
+    padding-left: 16px;
+}
+.forgetPassword{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 200% */
+    text-transform: capitalize;
+}
+.googleLoginStyle{
+    padding: 12px;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 1.5px solid white;
+    margin-top:15px;
+
+}
+.normalLoginStyle{
+    padding:12px;
+    width:100%;
+    height:48px;
+    background:#FF5414;
+    fontsize:16px !important;
+    color:white;
+    align-items: center;
+    outline: none;
+    border: none;
+}
