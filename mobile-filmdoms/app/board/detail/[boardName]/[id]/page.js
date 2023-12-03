@@ -7,9 +7,8 @@ export default async function page(props){
         .then(value => value.json())
     let commentData = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + `/api/v1/article/${props.params.boardName}/${props.params.id}/comment`,{method: 'get'})
         .then(value => value.json())
-    console.log("세부페이지 호출", props);
-    console.log(boardData);
+
     return (<div>
             <BoardDetailComponent boardName ={props.params.boardName} boardData = {boardData} commentData = {commentData}></BoardDetailComponent>
-            </div>)
+    </div>)
 }
