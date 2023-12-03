@@ -60,7 +60,7 @@ export default function TopPostList(props){
                 <div style={{overflow:"hidden",marginLeft:"auto", marginRight:"auto"}}>
                     <PostLists data ={props.data}></PostLists>
                 </div>
-                <Image style={{marginLeft:"auto",marginTop:'-5px'}} src={"/buttonDown.png"} width={24} height={24}></Image>
+                <Image alt={"ButtonDown"} style={{marginLeft:"auto",marginTop:'-5px'}} src={"/buttonDown.png"} width={24} height={24}></Image>
             </div>
         )
     }
