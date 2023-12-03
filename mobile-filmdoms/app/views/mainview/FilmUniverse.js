@@ -20,7 +20,7 @@ export default async function FilmUniverse()
                     data.map((value,key)=>{
                         return(
                             <div className={styles["filmUniverse-lists"]}>
-                                <Link href={`/board/detail/${value.category}/${value.id}`}><Image className={styles["filmUniverse-mainImage"]} src={value.mainImage} width={248} height={290} /></Link>
+                                <Link href={`/board/detail/${value.category}/${value.id}`}><Image className={styles["filmUniverse-mainImage"]} alt={"contents"} src={value.mainImage} width={248} height={290} /></Link>
                                 <div className={styles["filmUniverse-title"]}><Link href={`/board/detail/${value.category}/${value.id}`}>{value.title}</Link></div>
                                     <div className={styles["filmUniverse-date"]}>{value.startAt} ~ {value.endAt}</div>
                             </div>

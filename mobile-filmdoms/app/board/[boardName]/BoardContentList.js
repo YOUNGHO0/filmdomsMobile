@@ -40,6 +40,7 @@ function drawAuthorAndViewVote(value) {
     return <div>
         <div style={{display: "flex"}}>
             <Image style={{borderRadius: '100px'}}
+                   alt={"profileImage"}
                    src={process.env.NEXT_PUBLIC_BACKEND_URL + '/image/' + value.author.profileImage.uuidFileName}
                    width={22} height={22}></Image>
             <div className={styles["boardContent-nickname"]}>{value.author.nickname}</div>
@@ -63,7 +64,7 @@ export default  function BoardContentList(props){
             {
                 props.contentList.map((value)=>{
                     return (
-                            <div>
+                            <div key={value.id}>
                                 <Link href={`/board/detail/${value.category}/${value.id}`}>
                                 {drawTagAndDate(value)}
                                 {drawTitle(value)}

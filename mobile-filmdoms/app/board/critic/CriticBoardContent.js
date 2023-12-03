@@ -45,8 +45,8 @@ export default function CriticBoardContent(props){
         <div style={{marginLeft: '20px', marginRight: '20px', paddingTop: '16px '}}>
             <InfiniteScroll dataLength={data.pages.length} hasMore={hasNextPage} next={fetchNextPage} >
                 {
-                    data.pages.map((value)=>{
-                        return(<CriticContentList data = {value.result.content}></CriticContentList>)
+                    data.pages.map((value,index)=>{
+                        return(<CriticContentList key={"page"+index} data = {value.result.content}></CriticContentList>)
                     })
                 }
             </InfiniteScroll>

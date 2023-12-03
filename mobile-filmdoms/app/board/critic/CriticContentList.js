@@ -17,7 +17,7 @@ export default function CriticContentList(props){
                         let month = myDate.getMonth()+1;
                         let date = myDate.getDate();
                         return(
-                            <Link href={`/board/detail/${value.category}/${value.id}`}>
+                            <Link key={value.id} href={`/board/detail/${value.category}/${value.id}`}>
                                 <div>
                                     <img className={styles["critic-mainImage"]} src={value.mainImage}/>
                                     <div className={styles["critic-info"]}>
