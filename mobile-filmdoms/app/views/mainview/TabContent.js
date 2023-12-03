@@ -23,7 +23,7 @@ function CustomTabPanel(props) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    <div>{children}</div>
                 </Box>
             )}
         </div>
@@ -57,10 +57,10 @@ export default function TabBoard({recent,movie}) {
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-                <TabContentList data = {recent}></TabContentList>
+                <TabContentList data = {recent} category = {"recent"}></TabContentList>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                <TabContentList data = {movie}></TabContentList>
+                <TabContentList data = {movie} category = {"movie"}></TabContentList>
             </CustomTabPanel>
         </Box>
     );
