@@ -2,11 +2,12 @@
 import {useRouter} from "next/navigation";
 import styles from './BoardDetailComponent.module.css'
 import Image from "next/image";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import TagDateAndTitle from "@/app/board/detail/[boardName]/[id]/header/TagAndTitle";
 import AuthorAndInfo from "@/app/board/detail/[boardName]/[id]/header/AuthorAndInfo";
 import ContentAndLikes from "@/app/board/detail/[boardName]/[id]/content/ContentAndLikes";
 import CommentComponent from "@/app/board/detail/[boardName]/[id]/comment/CommentComponent";
+import {UserContext} from "@/app/hooks/useContext/UserContext";
 
 function toDate(number){
     const timestamp = number;
@@ -23,7 +24,7 @@ export default function BoardDetailComponent(props){
     let router = useRouter()
     let boardData = props.boardData.result;
     let commentData = props.commentData.result;
-
+    let [userProfileState,setUserProfile] = useContext(UserContext);
     let [userLike,changUserLike] = useState(boardData.liked)
 
     function BackButton() {
