@@ -41,7 +41,7 @@ export default function Carousel() {
                 <Image alt={"메인 이미지"} width={0} height={0} sizes={"100vw"} style={{width:"100%" , height:"auto"}} src={"/carousel.png"}/>
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={375} alt={"bannerImage"} height={404} src={"/carousel.png"}/>
+                <Image alt={"메인 이미지"} width={0} height={0} sizes={"100vw"} style={{width:"100%" , height:"auto"}} src={"/carousel.png"}/>
             </SwiperSlide>
         </Swiper>
     );
