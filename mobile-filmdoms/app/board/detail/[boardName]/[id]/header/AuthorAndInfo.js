@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/app/board/detail/[boardName]/[id]/BoardDetailComponent.module.css";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import Link from "next/link";
 
 export default function AuthorAndInfo(props) {
     let boardData = props.boardData;
@@ -8,8 +9,10 @@ export default function AuthorAndInfo(props) {
 
     return <div>
         <div style={{display: "flex"}}>
-            <Image  style={{marginRight:"6px", borderRadius:"100px"}} src={process.env.NEXT_PUBLIC_BACKEND_URL + '/image/' +boardData.author.profileImage.uuidFileName} width={22} height={22}></Image>
+            <Link href={"/user?id="+boardData.author.id} style={{display:"flex"}}>
+            <Image  alt={"profileImage"} style={{marginRight:"6px", borderRadius:"100px"}} src={process.env.NEXT_PUBLIC_BACKEND_URL + '/image/' +boardData.author.profileImage.uuidFileName} width={22} height={22}></Image>
             <div className={styles.nickName }>{boardData.author.nickname}</div>
+            </Link>
             <div style={{marginLeft:"auto",  display:"flex"}}>
                 <div className={styles.detailInfo}>조회수</div>
                 <div className={`${styles.detailInfo} ${styles.detailColor}`}>{boardData.views}</div>
