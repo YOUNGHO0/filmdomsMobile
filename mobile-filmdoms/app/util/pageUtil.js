@@ -52,13 +52,20 @@ export async function getRefreshToken(){
 
 export async function getProfileUsingRefreshToken(){
 
-    let result = await postRequestWithCookiesTo("/api/v1/account/refresh-token",undefined,(value)=>value,(reason)=>{console.log(reason)})
-    let cookie = result.headers.get("set-cookie")
-    let userProfile = await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL+ '/api/v1/account/profile',{headers:
-            {
-                cookie:cookie
-            }}).then(value => value.data)
-    console.log(userProfile)
-    return userProfile
+    let result = await postRequestWithCookiesTo("/api/v1/account/refresh-token",undefined,fetchProfile,(reason)=>{console.log("리프레시토큰예외처리완료")})
+
+    async function fetchProfile(result){
+        let cookie = result.headers.get("set-cookie")
+        let userProfile = await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL+ '/api/v1/account/profile',{headers:
+                {
+                    cookie:cookie
+                }}).then(value => value.data)
+        return userProfile
+
+    }
+    return result
+
+
 
 }
+
