@@ -29,7 +29,7 @@ function LikeButton(props) {
         height: "32px",
         boxSizing: "border-box"
     }}>
-        <Image style={{marginRight: "8px"}} src={userLike === true ?"/liked.png":"/like.png"} width={20} height={20}></Image>
+        <Image alt={"Likes"} style={{marginRight: "8px"}} src={userLike === true ?"/liked.png":"/like.png"} width={20} height={20}></Image>
         <div className={styles.likeText}>{boardData.likes}</div>
     </Button>;
 }
