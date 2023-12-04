@@ -29,7 +29,7 @@ export default function BoardDetailComponent(props){
 
     function BackButton() {
         return <div onClick={() => router.back()} style={{display: "flex"}}>
-            <Image src={'/buttonBack.svg'} width={28} height={28}></Image>
+            <Image alt={"backButton"} src={'/buttonBack.svg'} width={28} height={28}></Image>
             <div className={styles.detailBoardName} style={{textTransform: "capitalize"}}> {props.boardName}</div>
         </div>;
     }
