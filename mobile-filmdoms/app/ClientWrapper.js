@@ -8,10 +8,12 @@ export default function ClientWrapper(props){
   let [user,changeUser] = useState(props.value);
   let userState = [user,changeUser];
 
-  useLayoutEffect(()=>{refreshTokenMethod()});
+    useLayoutEffect(  ()=>{ refreshTokenMethod()});
 
-  const refreshTokenMethod = ()=>axios.post('/api/v1/account/refresh-token',{headers: {"Content-Type": `application/json`}})
-      .catch(()=>{})
+     function refreshTokenMethod(){
+        axios.post('/api/v1/account/refresh-token',{headers: {"Content-Type": `application/json`}})
+            .catch(reason => {})
+    }
 
     return(
         <div>
