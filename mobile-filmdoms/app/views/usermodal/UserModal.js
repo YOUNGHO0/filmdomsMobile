@@ -4,6 +4,8 @@ import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/post
 import Image from "next/image";
 import styles from './UserModal.module.css'
 import Link from "next/link";
+import axios from "axios";
+import {toast} from "react-toastify";
 export default function UserModal(props){
 
     let [userProfileState,setUserProfile] = useContext(UserContext);
@@ -29,14 +31,18 @@ export default function UserModal(props){
             <hr style={{marginTop:"16px",marginBottom:"24px",background:"#D9D9D9",opacity:"60%"}}></hr>
             <div style={{marginLeft:"24px"}}>
                 <div onClick={()=>{props.setOpen(false)}} className={styles.menu} style={{marginBottom:"16px"}}><Link href={'/mypage'}>마이 페이지</Link></div>
-                <div onClick={()=>{props.setOpen(false)}} className={styles.menu} style={{marginBottom:"16px"}}>활동 내역</div>
+                <div onClick={()=>{props.setOpen(false)}} className={styles.menu} style={{marginBottom:"16px"}}><Link href={'/mypage/activity'}> 활동 내역</Link></div>
                 <div onClick={()=>{props.setOpen(false)}} className={styles.menu} style={{marginBottom:"16px"}}>스레드</div>
-                <div onClick={()=>{props.setOpen(false)}} className={styles.menu} style={{marginBottom:"24px"}}>로그아웃</div>
+                <div onClick={()=>{props.setOpen(false); logOut(); setUserProfile(undefined)}} className={styles.menu} style={{marginBottom:"24px"}}>로그아웃</div>
             </div>
 
         </div>
     </div>
 
+}
+
+function logOut(){
+    axios.post("/api/v1/account/logout").then(toast("로그아웃 성공"))
 }
 
 function toDate(number){
