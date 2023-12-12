@@ -4,6 +4,7 @@ import {useContext, useState} from "react";
 import axios from "axios";
 import {toast, ToastContainer} from "react-toastify";
 import {UserContext} from "@/app/hooks/useContext/UserContext";
+import Link from "next/link";
 
 const notify = () => toast.success('로그인 되었습니다', {
     position: "top-center",
@@ -57,7 +58,9 @@ export default function LoginComponent(props){
                 <button type={"button"} className={styles.googleLoginStyle}>
                     <div style={{display:"flex", justifyContent:"center", alignItems:"flex-start"}}>
                         <Image src={"/google.png"} width={19} height={19}></Image>
-                        <div style={{marginLeft:"8px"}}>구글로 로그인</div>
+                        <div style={{marginLeft:"8px"}}>
+                            <Link href={process.env.NEXT_PUBLIC_BACKEND_URL + "/oauth2/authorization/google"}>구글로 로그인</Link>
+                            </div>
                     </div>
                 </button>
                 <div style={{display:"flex", justifyContent:"center",marginTop:"24px"}}>
