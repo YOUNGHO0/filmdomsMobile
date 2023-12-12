@@ -7,9 +7,7 @@ import Image from "next/image";
 import ClientWrapper from "@/app/ClientWrapper";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
-import {cookies} from "next/headers";
-import axios from "axios";
-import {getProfileUsingRefreshToken, getRefreshToken, getRequestWithCookiesTo} from "@/app/util/pageUtil";
+import {fetchProfile, getRequestWithCookiesTo, withRefreshToken} from "@/app/util/pageUtil";
 
 export const metadata = {
   title: 'Create Next App',
@@ -93,8 +91,11 @@ function Footer(){
 
 
 export default async function RootLayout(props) {
-   let userProfile=  await getRequestWithCookiesTo('/api/v1/account/profile',(value)=>value.data,getProfileUsingRefreshToken)
 
+
+
+   let userProfile = await getRequestWithCookiesTo('/api/v1/account/profile',(value)=>value.data,
+       ()=>withRefreshToken(fetchProfile,()=>{console.log("리프레시토큰 예외처리 완료")}))
     return (
         <html lang="en">
         <body>
