@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {toDate} from "@/app/util/clientUtil";
 
@@ -34,8 +33,8 @@ CustomTabPanel.propTypes = {
 
 function a11yProps(index) {
     return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
+        id: `-tab-${index}`,
+        'aria-': `simple-tabpanel-${index}`,
     };
 }
 
@@ -49,22 +48,24 @@ export default function ActivityTabs(props) {
     const clicked = {
         width:"50%",
         color:"#FF5414",
-        fontWeight:"700"
+        fontWeight:"700",
+        maxWidth:"none"
     }
 
     const unclicked = {
         width:"50%",
         color:"#AAAAAA",
-        fontWeight:"700"
+        fontWeight:"700",
+        maxWidth:"none"
     }
 
 
     return (
-        <Box sx={{ width: '100%' }}>
-            <Box sx={{width:"100%"}}>
-                <Tabs sx={{width:"100%"}} TabIndicatorProps={{style: {background:"none", borderBottom:"#FF5414 2px solid"}}} value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab  style={value===0 ? clicked: unclicked} label="작성글" {...a11yProps(0)} />
-                    <Tab style={value===1 ? clicked: unclicked} label="작성댓글" {...a11yProps(1)} />
+        <div>
+            <Box style={{width:"100%"}}>
+                <Tabs style={{width:"100%"}} TabIndicatorProps={{style: {background:"none", borderBottom:"#FF5414 2px solid"}}} value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab  style={value===0 ? clicked: unclicked} label="작성글" />
+                    <Tab style={value===1 ? clicked: unclicked} label="작성댓글"  />
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
@@ -73,15 +74,17 @@ export default function ActivityTabs(props) {
             <CustomTabPanel value={value} index={1}>
                 <UserCommentActivityList data = {props.writtenComments}></UserCommentActivityList>
             </CustomTabPanel>
-        </Box>
+        </div>
+
     );
 }
 
 
 function UserArticleActivityList(props){
 
+
     return <div>
-        {props.data.map((value)=><ArticleActivity data={value}></ArticleActivity>)}
+        {props.data.length ===0?<div style={{fontSize:"14px",fontWeight:"500"}}>작성한 게시글이 없습니다.</div> :props.data.map((value)=><ArticleActivity data={value}></ArticleActivity>)}
     </div>
 
     function ArticleActivity(props){
@@ -101,7 +104,7 @@ function UserArticleActivityList(props){
 function UserCommentActivityList(props) {
 
     return <div>
-        {props.data.map((value) => <CommentActivity data={value}></CommentActivity>)}
+        {props.data.length===0 ? <div style={{fontSize:"14px",fontWeight:"500"}}>작성한 댓글이 없습니다.</div> :props.data.map((value) => <CommentActivity data={value}></CommentActivity>)}
     </div>
 
     function CommentActivity(props) {
