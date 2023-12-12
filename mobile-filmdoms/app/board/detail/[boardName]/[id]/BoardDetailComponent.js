@@ -2,7 +2,7 @@
 import {useRouter} from "next/navigation";
 import styles from './BoardDetailComponent.module.css'
 import Image from "next/image";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import TagDateAndTitle from "@/app/board/detail/[boardName]/[id]/header/TagAndTitle";
 import AuthorAndInfo from "@/app/board/detail/[boardName]/[id]/header/AuthorAndInfo";
 import ContentAndLikes from "@/app/board/detail/[boardName]/[id]/content/ContentAndLikes";
@@ -20,13 +20,11 @@ function toDate(number){
 
 
 export default function BoardDetailComponent(props){
-
     let router = useRouter()
     let boardData = props.boardData.result;
     let commentData = props.commentData.result;
     let [userProfileState,setUserProfile] = useContext(UserContext);
-    let [userLike,changUserLike] = useState(boardData.liked)
-
+    let userLike =boardData.liked
     function BackButton() {
         return <div onClick={() => router.back()} style={{display: "flex"}}>
             <Image alt={"backButton"} src={'/buttonBack.svg'} width={28} height={28}></Image>
@@ -40,11 +38,13 @@ export default function BoardDetailComponent(props){
             <div style={{margin:"26px 20px"}}>
                 <TagDateAndTitle boardData = {boardData} toDate = {toDate}></TagDateAndTitle>
                 <AuthorAndInfo boardData = {boardData} commentCount = {commentData.commentCount}></AuthorAndInfo>
-                <ContentAndLikes boardData = {boardData} userLike = {userLike}></ContentAndLikes>
+                <ContentAndLikes  boardData = {boardData} userLike = {userLike}></ContentAndLikes>
             </div>
             <div>
-                <CommentComponent commentData = {commentData}></CommentComponent>
+                <CommentComponent boardId={boardData.id} commentData = {commentData}></CommentComponent>
             </div>
+
         </div>
     )
 }
+
