@@ -5,6 +5,7 @@ import axios from "axios";
 import {toast, ToastContainer} from "react-toastify";
 import {UserContext} from "@/app/hooks/useContext/UserContext";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 const notify = () => toast.success('로그인 되었습니다', {
     position: "top-center",
@@ -43,6 +44,7 @@ export default function LoginComponent(props){
     const [userEmail,changeUserEmail] = useState("");
     const [userPw,changeUserPw] = useState("");
     const [errorInfo, changeErrorInfo] = useState("");
+    const router = useRouter()
     const setOpen = props.setOpen
     let [userProfileState,setUserProfile] = useContext(UserContext);
     let loginDto = {email:userEmail,password:userPw};
@@ -65,7 +67,7 @@ export default function LoginComponent(props){
                 </button>
                 <div style={{display:"flex", justifyContent:"center",marginTop:"24px"}}>
                     <div style={{color:"white"}}> 아직 필름덤즈 회원이 아니신가요?</div>
-                    <div style={{marginLeft:"8px",color:"#FF5414"}}> 회원가입</div>
+                   <div onClick={()=>{setOpen(false); router.push("/auth/register")}} style={{marginLeft:"8px",color:"#FF5414"}}> 회원가입</div>
                 </div>
 
             </div>
