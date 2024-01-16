@@ -190,3 +190,7 @@ export function ReplyButton(props) {
     return
 
 }
+
+export function RedLine(){
+    return <div style={{width:"24px", height:"4px",background:"#FF5414"}}></div>
+}

@@ -145,9 +145,7 @@ export default function UserMyPage(){
         </div>
 
     }
-    function RedLine(){
-        return <div style={{width:"24px", height:"4px",background:"#FF5414"}}></div>
-    }
+
     function BackButton(props) {
         return <div onClick={() => router.back()} style={{display: "flex"}}>
             <Image alt={"backButton"} src={'/buttonBack.svg'} width={28} height={28}></Image>
