@@ -7,6 +7,7 @@ import Image from "next/image";
 import ClientWrapper from "@/app/ClientWrapper";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import {fetchProfile, getRequestWithCookiesTo, withRefreshToken} from "@/app/util/pageUtil";
 
 export const metadata = {
@@ -15,7 +16,6 @@ export const metadata = {
 }
 
  function LogoUserSearchButton(){
-
     return(
         <div style={{display:"flex", alignItems:"center"}}>
             <div style={{padding:"12px 20px"}}>
