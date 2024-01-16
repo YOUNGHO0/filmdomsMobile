@@ -5,13 +5,14 @@ import axios from "axios";
 import {useContext} from "react";
 import {UserContext} from "@/app/hooks/useContext/UserContext";
 import {useRouter} from "next/navigation";
+import ReactQuill from "react-quill";
 
 export default function  ContentAndLikes(props) {
     let boardData = props.boardData;
     let userLike = props.userLike;
     return <div>
         <div style={{marginTop: "32px", marginBottom: "64px"}}>
-            {boardData.content}
+            <ReactQuill className={styles.contents} theme="default" value={boardData.content} readOnly={true} />;
         </div>
         <div style={{display: "flex", justifyContent: "center"}}>
            <LikeButton boardData = {boardData} userLike = {userLike}></LikeButton>

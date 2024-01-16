@@ -65,4 +65,10 @@
     font-weight: 700;
     line-height: 24px; /* 171.429% */
 }
+.contents{
+    border: none;
+}
+.contents img{
+    width: 100%;
+}
 
